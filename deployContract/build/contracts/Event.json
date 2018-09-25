@@ -1,0 +1,1893 @@
+{
+  "contractName": "Event",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "pool",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "name": "player",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "status",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "types",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "balance",
+          "type": "uint256"
+        }
+      ],
+      "name": "NProfitEvent",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "player",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "balance",
+          "type": "uint256"
+        }
+      ],
+      "name": "LProfitEvent",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "player",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "inputNumber",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "registNumber",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "upline",
+          "type": "address"
+        }
+      ],
+      "name": "RegistEvent",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "pool",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "winner",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "loser",
+          "type": "uint256"
+        }
+      ],
+      "name": "LuckyProfitEvent",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "pool",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "winner",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "loser1",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "loser2",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "loser3",
+          "type": "uint256"
+        }
+      ],
+      "name": "CrazyProfitEvent",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "pool",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "winner",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "loser",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "balance",
+          "type": "uint256"
+        }
+      ],
+      "name": "LuckyLotteryEvent",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "pool",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "winner",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "balance",
+          "type": "uint256"
+        }
+      ],
+      "name": "CrazyLotteryEvent",
+      "type": "event"
+    }
+  ],
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a7230582084694e53fb659f11256b5f95235ce4e6de8940af307063c2cee5bea4558783630029",
+  "deployedBytecode": "0x6080604052600080fd00a165627a7a7230582084694e53fb659f11256b5f95235ce4e6de8940af307063c2cee5bea4558783630029",
+  "sourceMap": "27:693:4:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;27:693:4;;;;;;;",
+  "deployedSourceMap": "27:693:4:-;;;;;",
+  "source": "pragma solidity ^0.4.21;\n\n\ncontract Event{\n    //遊戲獲利事件\n    event NProfitEvent(uint pool,address indexed player, uint status, uint types, uint balance);\n    //組織獲利事件\n    event LProfitEvent(address indexed player, uint balance);\n    //註冊事件\n    event RegistEvent(address indexed player,uint inputNumber, uint registNumber, address upline);\n    //結算事件\n    event LuckyProfitEvent(uint pool, uint winner, uint loser);\n    event CrazyProfitEvent(uint pool, uint winner, uint loser1, uint loser2, uint loser3);\n    //樂透結算\n    event LuckyLotteryEvent(uint pool, address winner, address loser, uint balance);\n    event CrazyLotteryEvent(uint pool, address winner, uint balance); \n}\n",
+  "sourcePath": "/home/tung/language/python/contractControl/deployContract/contracts/Event.sol",
+  "ast": {
+    "absolutePath": "/home/tung/language/python/contractControl/deployContract/contracts/Event.sol",
+    "exportedSymbols": {
+      "Event": [
+        1721
+      ]
+    },
+    "id": 1722,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1654,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".21"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:4"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1721,
+        "linearizedBaseContracts": [
+          1721
+        ],
+        "name": "Event",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 1666,
+            "name": "NProfitEvent",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 1665,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1656,
+                  "indexed": false,
+                  "name": "pool",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1666,
+                  "src": "91:9:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1655,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "91:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1658,
+                  "indexed": true,
+                  "name": "player",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1666,
+                  "src": "101:22:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1657,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "101:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1660,
+                  "indexed": false,
+                  "name": "status",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1666,
+                  "src": "125:11:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1659,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "125:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1662,
+                  "indexed": false,
+                  "name": "types",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1666,
+                  "src": "138:10:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1661,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "138:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1664,
+                  "indexed": false,
+                  "name": "balance",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1666,
+                  "src": "150:12:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1663,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "150:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "90:73:4"
+            },
+            "src": "72:92:4"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 1672,
+            "name": "LProfitEvent",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 1671,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1668,
+                  "indexed": true,
+                  "name": "player",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1672,
+                  "src": "213:22:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1667,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "213:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1670,
+                  "indexed": false,
+                  "name": "balance",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1672,
+                  "src": "237:12:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1669,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "237:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "212:38:4"
+            },
+            "src": "194:57:4"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 1682,
+            "name": "RegistEvent",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 1681,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1674,
+                  "indexed": true,
+                  "name": "player",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1682,
+                  "src": "293:22:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1673,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "293:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1676,
+                  "indexed": false,
+                  "name": "inputNumber",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1682,
+                  "src": "316:16:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1675,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "316:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1678,
+                  "indexed": false,
+                  "name": "registNumber",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1682,
+                  "src": "334:17:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1677,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "334:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1680,
+                  "indexed": false,
+                  "name": "upline",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1682,
+                  "src": "353:14:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1679,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "353:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "292:76:4"
+            },
+            "src": "275:94:4"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 1690,
+            "name": "LuckyProfitEvent",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 1689,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1684,
+                  "indexed": false,
+                  "name": "pool",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1690,
+                  "src": "416:9:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1683,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "416:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1686,
+                  "indexed": false,
+                  "name": "winner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1690,
+                  "src": "427:11:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1685,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "427:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1688,
+                  "indexed": false,
+                  "name": "loser",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1690,
+                  "src": "440:10:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1687,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "440:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "415:36:4"
+            },
+            "src": "393:59:4"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 1702,
+            "name": "CrazyProfitEvent",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 1701,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1692,
+                  "indexed": false,
+                  "name": "pool",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1702,
+                  "src": "480:9:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1691,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "480:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1694,
+                  "indexed": false,
+                  "name": "winner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1702,
+                  "src": "491:11:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1693,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "491:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1696,
+                  "indexed": false,
+                  "name": "loser1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1702,
+                  "src": "504:11:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1695,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "504:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1698,
+                  "indexed": false,
+                  "name": "loser2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1702,
+                  "src": "517:11:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1697,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "517:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1700,
+                  "indexed": false,
+                  "name": "loser3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1702,
+                  "src": "530:11:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1699,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "530:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "479:63:4"
+            },
+            "src": "457:86:4"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 1712,
+            "name": "LuckyLotteryEvent",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 1711,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1704,
+                  "indexed": false,
+                  "name": "pool",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1712,
+                  "src": "591:9:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1703,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "591:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1706,
+                  "indexed": false,
+                  "name": "winner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1712,
+                  "src": "602:14:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1705,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "602:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1708,
+                  "indexed": false,
+                  "name": "loser",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1712,
+                  "src": "618:13:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1707,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "618:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1710,
+                  "indexed": false,
+                  "name": "balance",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1712,
+                  "src": "633:12:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1709,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "633:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "590:56:4"
+            },
+            "src": "567:80:4"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 1720,
+            "name": "CrazyLotteryEvent",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 1719,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1714,
+                  "indexed": false,
+                  "name": "pool",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1720,
+                  "src": "676:9:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1713,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "676:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1716,
+                  "indexed": false,
+                  "name": "winner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1720,
+                  "src": "687:14:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1715,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "687:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1718,
+                  "indexed": false,
+                  "name": "balance",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1720,
+                  "src": "703:12:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1717,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "703:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "675:41:4"
+            },
+            "src": "652:65:4"
+          }
+        ],
+        "scope": 1722,
+        "src": "27:693:4"
+      }
+    ],
+    "src": "0:721:4"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/tung/language/python/contractControl/deployContract/contracts/Event.sol",
+    "exportedSymbols": {
+      "Event": [
+        1721
+      ]
+    },
+    "id": 1722,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1654,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".21"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:4"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1721,
+        "linearizedBaseContracts": [
+          1721
+        ],
+        "name": "Event",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 1666,
+            "name": "NProfitEvent",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 1665,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1656,
+                  "indexed": false,
+                  "name": "pool",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1666,
+                  "src": "91:9:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1655,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "91:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1658,
+                  "indexed": true,
+                  "name": "player",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1666,
+                  "src": "101:22:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1657,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "101:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1660,
+                  "indexed": false,
+                  "name": "status",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1666,
+                  "src": "125:11:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1659,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "125:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1662,
+                  "indexed": false,
+                  "name": "types",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1666,
+                  "src": "138:10:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1661,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "138:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1664,
+                  "indexed": false,
+                  "name": "balance",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1666,
+                  "src": "150:12:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1663,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "150:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "90:73:4"
+            },
+            "src": "72:92:4"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 1672,
+            "name": "LProfitEvent",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 1671,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1668,
+                  "indexed": true,
+                  "name": "player",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1672,
+                  "src": "213:22:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1667,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "213:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1670,
+                  "indexed": false,
+                  "name": "balance",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1672,
+                  "src": "237:12:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1669,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "237:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "212:38:4"
+            },
+            "src": "194:57:4"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 1682,
+            "name": "RegistEvent",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 1681,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1674,
+                  "indexed": true,
+                  "name": "player",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1682,
+                  "src": "293:22:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1673,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "293:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1676,
+                  "indexed": false,
+                  "name": "inputNumber",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1682,
+                  "src": "316:16:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1675,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "316:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1678,
+                  "indexed": false,
+                  "name": "registNumber",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1682,
+                  "src": "334:17:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1677,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "334:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1680,
+                  "indexed": false,
+                  "name": "upline",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1682,
+                  "src": "353:14:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1679,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "353:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "292:76:4"
+            },
+            "src": "275:94:4"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 1690,
+            "name": "LuckyProfitEvent",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 1689,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1684,
+                  "indexed": false,
+                  "name": "pool",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1690,
+                  "src": "416:9:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1683,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "416:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1686,
+                  "indexed": false,
+                  "name": "winner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1690,
+                  "src": "427:11:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1685,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "427:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1688,
+                  "indexed": false,
+                  "name": "loser",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1690,
+                  "src": "440:10:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1687,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "440:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "415:36:4"
+            },
+            "src": "393:59:4"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 1702,
+            "name": "CrazyProfitEvent",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 1701,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1692,
+                  "indexed": false,
+                  "name": "pool",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1702,
+                  "src": "480:9:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1691,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "480:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1694,
+                  "indexed": false,
+                  "name": "winner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1702,
+                  "src": "491:11:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1693,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "491:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1696,
+                  "indexed": false,
+                  "name": "loser1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1702,
+                  "src": "504:11:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1695,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "504:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1698,
+                  "indexed": false,
+                  "name": "loser2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1702,
+                  "src": "517:11:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1697,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "517:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1700,
+                  "indexed": false,
+                  "name": "loser3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1702,
+                  "src": "530:11:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1699,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "530:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "479:63:4"
+            },
+            "src": "457:86:4"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 1712,
+            "name": "LuckyLotteryEvent",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 1711,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1704,
+                  "indexed": false,
+                  "name": "pool",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1712,
+                  "src": "591:9:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1703,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "591:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1706,
+                  "indexed": false,
+                  "name": "winner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1712,
+                  "src": "602:14:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1705,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "602:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1708,
+                  "indexed": false,
+                  "name": "loser",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1712,
+                  "src": "618:13:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1707,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "618:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1710,
+                  "indexed": false,
+                  "name": "balance",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1712,
+                  "src": "633:12:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1709,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "633:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "590:56:4"
+            },
+            "src": "567:80:4"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 1720,
+            "name": "CrazyLotteryEvent",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 1719,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1714,
+                  "indexed": false,
+                  "name": "pool",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1720,
+                  "src": "676:9:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1713,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "676:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1716,
+                  "indexed": false,
+                  "name": "winner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1720,
+                  "src": "687:14:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1715,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "687:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1718,
+                  "indexed": false,
+                  "name": "balance",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1720,
+                  "src": "703:12:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1717,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "703:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "675:41:4"
+            },
+            "src": "652:65:4"
+          }
+        ],
+        "scope": 1722,
+        "src": "27:693:4"
+      }
+    ],
+    "src": "0:721:4"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2018-09-25T10:33:16.058Z"
+}
