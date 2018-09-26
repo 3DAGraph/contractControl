@@ -9,6 +9,8 @@ greeter = web3.eth.contract(
 )
 
 class Solidity:
+    def Gunabizero(func):
+        return greeter.functions[func]().call()
     def Gunabione(func,argv):
         return greeter.functions[func](argv).call()
     def Gunabitwo(func,argv1,argv2):
@@ -21,7 +23,12 @@ class Solidity:
         return greeter.functions.profit(Web3.toChecksumAddress(target)).call()
     def Gunlayermap(target):
         return greeter.functions.layermap(Web3.toChecksumAddress(target)).call()
-
+#print("查詢獎金：","0x3Ee8ae904830A51A4cBF7588B02f05a33f870576",Solidity.Gunabione("inquire","0x3Ee8ae904830A51A4cBF7588B02f05a33f870576"))    
+#print("獲得獎金：",Solidity.Gunabizero("getProfitout"))
+#print("獲得獎金：",Solidity.Gunabizero("getadminProfitout"))
+#print("分層獎金：",Solidity.Gunabitwo("allocateProfit",0.1,"0x3Ee8ae904830A51A4cBF7588B02f05a33f870576"))
+print("池子數量：",Solidity.Gunabizero("pooln_lucky1"))
+print("池子玩家：","5",Solidity.Gunabione("pool_lucky1",5))
 print("luck0.1 state:",Solidity.Gunabione("search_L1",0))
 profit = Solidity.Gunprofit("0x3Ee8ae904830A51A4cBF7588B02f05a33f870576")
 print("0x3Ee8ae904830A51A4cBF7588B02f05a33f870576收益:",profit)
