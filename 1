@@ -20,7 +20,7 @@ class Transaction:
             #'to':Config.Net.Set()["contract"],
             'value': 0,
             'gas': 6000000,
-            'gasPrice': 10**11,
+            'gasPrice': 10**10,
             'nonce':nonce,
             'data':bytecode
         }
@@ -31,9 +31,7 @@ class Transaction:
         try:
             return web3.eth.sendRawTransaction(raw)
         except Exception as e:
-            return e
+            return str(e)
     def Nonce(address):
         reAddress = web3.toChecksumAddress(address)
         return web3.eth.getTransactionCount(reAddress)
-
-
